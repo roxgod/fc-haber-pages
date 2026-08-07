@@ -3,30 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FC Haber Botu | Football news, automated responsibly</title>
-  <meta name="description" content="FC Haber Botu automates football news publishing across approved social platforms.">
+  <title>FC Haber Botu · TikTok Developer Demo</title>
   <style>
-    :root { --bg:#08111f; --panel:#101d31; --text:#eef5ff; --muted:#a7b8d2; --accent:#54e0ad; --line:#233755; }
-    * { box-sizing:border-box; } body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif; color:var(--text); background:radial-gradient(circle at 80% -10%,#18426b 0,transparent 42%),var(--bg); line-height:1.6; }
-    a { color:inherit; } .wrap { width:min(1120px,calc(100% - 40px)); margin:auto; }
-    nav { display:flex; justify-content:space-between; align-items:center; padding:24px 0; } .brand { font-weight:800; letter-spacing:-.03em; } .brand span { color:var(--accent); }
-    nav a { color:var(--muted); text-decoration:none; margin-left:22px; font-size:.95rem; } nav a:hover { color:var(--text); }
-    .hero { padding:94px 0 86px; max-width:820px; } .eyebrow { color:var(--accent); text-transform:uppercase; font-size:.78rem; letter-spacing:.16em; font-weight:800; }
-    h1 { font-size:clamp(2.8rem,7vw,5.8rem); line-height:1.02; letter-spacing:-.07em; margin:18px 0 24px; } .hero p { color:var(--muted); font-size:1.18rem; max-width:680px; }
-    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; } .button { padding:12px 18px; border-radius:999px; border:1px solid var(--line); text-decoration:none; font-weight:700; } .button.primary { color:#06151b; background:var(--accent); border-color:var(--accent); }
-    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; padding:24px 0 88px; } .card { background:rgba(16,29,49,.78); border:1px solid var(--line); border-radius:20px; padding:24px; } .card h2 { margin-top:0; font-size:1.15rem; } .card p { color:var(--muted); margin-bottom:0; }
-    footer { border-top:1px solid var(--line); color:var(--muted); padding:28px 0 42px; font-size:.9rem; } footer a { color:var(--muted); margin-right:18px; }
-    @media (max-width:720px) { nav { align-items:flex-start; gap:12px; flex-direction:column; } nav a { margin:0 16px 0 0; } .hero { padding-top:58px; } .grid { grid-template-columns:1fr; padding-bottom:56px; } }
+    :root{--bg:#07111e;--panel:#101e31;--line:#28405f;--text:#f4f8ff;--muted:#a8bad4;--green:#55e0ad;--pink:#ff4f86}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#173e64,transparent 40%),var(--bg);color:var(--text);font:16px/1.5 Inter,system-ui,sans-serif}.shell{width:min(980px,calc(100% - 32px));margin:auto}.top{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}.logo{font-weight:800;letter-spacing:-.04em}.logo i{font-style:normal;color:var(--green)}.badge{font-size:.75rem;color:#06151b;background:var(--green);padding:5px 10px;border-radius:99px;font-weight:800}.hero{padding:58px 0 30px}.eyebrow{color:var(--green);font-size:.75rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800}h1{font-size:clamp(2.3rem,6vw,4.7rem);line-height:1;letter-spacing:-.07em;margin:14px 0}p{color:var(--muted)}.demo{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:22px 0 70px}.card{background:rgba(16,30,49,.9);border:1px solid var(--line);border-radius:20px;padding:24px}.card h2{font-size:1.1rem;margin:0 0 18px}.step{display:flex;gap:12px;align-items:flex-start;margin:18px 0}.num{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;background:#1e3552;color:var(--green);font-weight:800}.step p{margin:2px 0}.button{display:inline-flex;justify-content:center;align-items:center;border:0;border-radius:11px;padding:12px 16px;font-weight:800;cursor:pointer;background:var(--green);color:#06151b;width:100%;margin-top:10px}.button.secondary{background:#1d324e;color:var(--text)}.button:disabled{opacity:.55;cursor:not-allowed}.select{width:100%;background:#0a1628;color:var(--text);border:1px solid var(--line);border-radius:11px;padding:12px;margin:8px 0}.status{margin-top:18px;padding:14px;border-radius:12px;background:#0a1628;border:1px solid var(--line);color:var(--muted);min-height:52px}.status.ok{border-color:#2f9f7d;color:var(--green)}.status.warn{border-color:#a87939;color:#ffd18b}.notice{font-size:.83rem;padding:12px;border-left:3px solid var(--pink);background:rgba(255,79,134,.08);color:var(--muted)}footer{border-top:1px solid var(--line);padding:22px 0 36px;color:var(--muted);font-size:.85rem}@media(max-width:700px){.demo{grid-template-columns:1fr}.top{align-items:flex-start;gap:12px;flex-direction:column}}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <nav><div class="brand">FC <span>Haber</span> Botu</div><div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></nav>
+  <div class="shell">
+    <header class="top"><div class="logo">FC <i>Haber</i> Botu</div><div class="badge">TikTok Developer Review Demo</div></header>
     <main>
-      <section class="hero"><div class="eyebrow">Football publishing, with control</div><h1>News moves fast. Your workflow should too.</h1><p>FC Haber Botu helps turn verified EA SPORTS FC and football updates into clear, reviewable social content. Automation handles the routine work while platform permissions and human oversight stay in focus.</p><div class="actions"><a class="button primary" href="privacy.html">Read the privacy policy</a><a class="button" href="terms.html">View terms of service</a></div></section>
-      <section class="grid" aria-label="Product principles"><article class="card"><h2>Source-led</h2><p>Content is prepared from configured news and social sources, with platform-specific publishing controls.</p></article><article class="card"><h2>Permission-aware</h2><p>OAuth access is used only for the connected publishing accounts and can be revoked from those platforms.</p></article><article class="card"><h2>Built for review</h2><p>Private, draft, and approval-oriented workflows can keep a person in the loop before public posting.</p></article></section>
+      <section class="hero"><div class="eyebrow">Controlled demonstration</div><h1>Publish football news to TikTok.</h1><p>This page demonstrates the user journey requested for TikTok review: authorization, return to the app, media selection, and an upload confirmation.</p><div class="notice">Demo mode is enabled. No access token, client secret, or real upload is performed by this static page. Connect the buttons to the review backend before recording a live API demonstration.</div></section>
+      <section class="demo">
+        <article class="card"><h2>1 · Account connection</h2><div class="step"><div class="num">1</div><p id="login-copy">Connect a TikTok account to continue.</p></div><button class="button" id="login">Login with TikTok</button><div class="status" id="auth-status">Not connected.</div></article>
+        <article class="card"><h2>2 · Upload an example</h2><div class="step"><div class="num">2</div><p>Select a prepared vertical MP4.</p></div><select class="select" id="video"><option value="">Choose an example MP4…</option><option>fc-haber-example-short.mp4 · 1080×1920</option><option>fc-haber-transfer-update.mp4 · 1080×1920</option></select><button class="button secondary" id="upload" disabled>Upload to TikTok</button><div class="status" id="upload-status">Authorize first, then choose a video.</div></article>
+      </section>
     </main>
-    <footer><div>© 2026 FC Haber Botu</div><div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="mailto:support@fchaberbotu.com">support@fchaberbotu.com</a></div></footer>
+    <footer>FC Haber Botu · Review-only demo · <a href="../../privacy.html">Privacy Policy</a> · <a href="../../terms.html">Terms of Service</a></footer>
   </div>
+  <script>
+    const login = document.querySelector('#login');
+    const video = document.querySelector('#video');
+    const upload = document.querySelector('#upload');
+    const authStatus = document.querySelector('#auth-status');
+    const uploadStatus = document.querySelector('#upload-status');
+    // Replace this demo handler with a backend redirect to TikTok OAuth for a live review recording.
+    login.addEventListener('click', () => {
+      login.disabled = true; login.textContent = 'Connecting…';
+      setTimeout(() => { login.textContent = 'TikTok connected'; authStatus.textContent = 'Authorization complete. Returned to FC Haber Botu.'; authStatus.className = 'status ok'; upload.disabled = false; uploadStatus.textContent = 'Choose an example MP4 to continue.'; }, 900);
+    });
+    video.addEventListener('change', () => { upload.disabled = !video.value; if (video.value) uploadStatus.textContent = 'Ready to upload: ' + video.value; });
+    upload.addEventListener('click', () => {
+      upload.disabled = true; upload.textContent = 'Uploading…'; uploadStatus.className = 'status'; uploadStatus.textContent = 'Sending the approved video to TikTok…';
+      setTimeout(() => { upload.textContent = 'Upload complete'; uploadStatus.className = 'status ok'; uploadStatus.textContent = 'Success: TikTok draft created. The creator can finish editing and publish it in TikTok.'; }, 1400);
+    });
+  </script>
 </body>
 </html>
